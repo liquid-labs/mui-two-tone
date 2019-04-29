@@ -1,3 +1,7 @@
+import React from 'react'
+
+import { AppMenu } from '../components/widgets/AppMenu'
+
 import { createCatalystTheme } from '@liquid-labs/catalyst-theme'
 import merge from 'lodash.merge'
 
@@ -38,12 +42,12 @@ const defSpec = {
 
 const createMuiTwoToneTheme = (themeSpec) => {
   themeSpec = themeSpec || {}
-  const splashTheme = createCatalystTheme(merge({}, splashSpecDef, themeSpec))
-  const defTheme = createCatalystTheme(merge({}, defSpecDef, themeSpec))
+  const splashTheme = createCatalystTheme(merge({}, splashSpec, themeSpec))
+  const defaultTheme = createCatalystTheme(merge({}, defSpec, themeSpec))
 
   const themeRouter = [
     [/^[/]$/, splashTheme],
-    [/.*/, defTheme]
+    [/.*/, defaultTheme]
   ]
 
   return {
