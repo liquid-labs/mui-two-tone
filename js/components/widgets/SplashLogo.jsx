@@ -16,11 +16,12 @@ const SplashLogo = () => {
   }
 
   return (
-    <Grow in={true} timeout={timeout}>
+    <Grow in timeout={timeout}>
       <Grid item container justify="center" alignItems="center" style={{ flexGrow : 1 }}>
         {logo}
       </Grid>
     </Grow>
-)}
+  )
+}
 
 export { SplashLogo }

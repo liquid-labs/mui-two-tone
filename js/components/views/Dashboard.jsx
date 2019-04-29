@@ -34,7 +34,7 @@ const cardStyles = (theme) => ({
   },
   action : {
     outlineColor : `${theme.palette.secondary.main}`,
-    height: '100%'
+    height       : '100%'
   }
 })
 

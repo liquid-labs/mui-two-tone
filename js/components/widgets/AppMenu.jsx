@@ -41,7 +41,7 @@ const AppMenu = () => {
           open={Boolean(menuAnchor)}
           onClose={closeMenu}
       >
-        <AccountMenu closeMenu={closeMenu} openAuthenticationDialog={() => setAuthenticationDialogOpen(true) } />
+        <AccountMenu closeMenu={closeMenu} openAuthenticationDialog={() => setAuthenticationDialogOpen(true)} />
         <Divider />
         <MenuItem onClick={null}>
           <ListItemIcon><LightThemeIcon /></ListItemIcon>
