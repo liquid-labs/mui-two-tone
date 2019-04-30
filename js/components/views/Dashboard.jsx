@@ -33,9 +33,12 @@ const cardStyles = (theme) => ({
   root : {
   },
   action : {
-    outlineColor : `${theme.palette.secondary.main}`,
-    height       : '100%'
-  }
+    // outlineColor : `${theme.palette.secondary.main}`,
+    height : '100%',
+  },
+  content : {
+    height : '100%',
+  },
 })
 
 const useCardStyles = makeStyles(cardStyles)
@@ -51,10 +54,10 @@ const Dashboard = () => {
           theme.sections.map((sectionDef, i) => {
             const { label, path, onClick, Icon } = sectionDef
             return <Card key={path} className={cardClasses.root}>
-              <CardActionArea className={cardClasses.root} onClick={onClick}>
-                <CardContent>
+              <CardActionArea className={cardClasses.action} onClick={onClick}>
+                <CardContent className={cardClasses.content}>
                   <Grid component={Typography} variant="h5" container>
-                    <Icon />{label}
+                    {Icon && <Icon />}{label}
                   </Grid>
                   <Typography component="div">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
