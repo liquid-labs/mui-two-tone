@@ -34,10 +34,10 @@ const cardStyles = (theme) => ({
   },
   action : {
     // outlineColor : `${theme.palette.secondary.main}`,
-    height : '100%',
+    // height : '100%',
   },
   content : {
-    height : '100%',
+    // height : '100%',
   },
 })
 
@@ -61,6 +61,7 @@ const Dashboard = () => {
                   </Grid>
                   <Typography component="div">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    {i === 2 && "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
                   </Typography>
                 </CardContent>
               </CardActionArea>

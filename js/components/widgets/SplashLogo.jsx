@@ -18,7 +18,7 @@ const SplashLogo = ({minHeight=100}) => {
 
   return (
     <Grow in timeout={timeout}>
-      <Grid item container justify="center" alignItems="center" style={{ flexGrow : 1, minHeight }}>
+      <Grid item container justify="center" alignItems="center" style={{ minHeight }}>
         {logo}
       </Grid>
     </Grow>
@@ -29,8 +29,8 @@ if (process.env.NODE_ENV !== 'production') {
   SplashLogo.propTypes = {
     // TODO: match against 'css length' regex
     minHeight : PropTypes.oneOfType([
-      propTypes.string,
-      propTypes.number,
+      PropTypes.string,
+      PropTypes.number,
     ])
   }
 }
