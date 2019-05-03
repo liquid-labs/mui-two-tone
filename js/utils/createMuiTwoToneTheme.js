@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { AppMenu } from '../components/widgets/AppMenu'
+import { SplashLogo } from '../components/widgets/SplashLogo'
 
 import { createCatalystTheme } from '@liquid-labs/catalyst-theme'
 import merge from 'lodash.merge'
@@ -22,9 +23,19 @@ const splashSpec = {
   },
   layout : {
     header : {
-      showLogo : false,
-      variant  : 'dense',
-      appMenu  : { node : <AppMenu /> },
+      showLogo: false,
+      appMenu  : { node : <AppMenu style={{ position: 'fixed', top: 0, right: 0 }}/> },
+      children : <SplashLogo />,
+      props : {
+        style : { flexGrow: 4 },
+        ToolbarProps : { style : { height : '100%' }},
+        NavigationBarProps : {
+          style : { height : '100%' },
+          LeftGridProps   : { style: { flexBasis: '0'}},
+          CenterGridProps : { style: { flexBasis: '100%', maxWidth: 'unset', padding: '15px 0', height: '100%' }},
+          RightGridProps  : { style: { flexBasis: '0'}}
+        }
+      }
     },
     navigation : {
       visible : false,
