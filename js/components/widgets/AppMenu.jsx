@@ -22,7 +22,7 @@ const useAppMenuStyle = makeStyles({
   denseButton : { padding : '6px' }
 })
 
-const AppMenu = () => {
+const AppMenu = ({...props}) => {
   const [ menuAnchor, setMenuAnchor ] = useState(null)
   const [ authenticationDialogOpen, setAuthenticationDialogOpen ] = useState(false)
   const closeMenu = () => setMenuAnchor(null)
@@ -32,7 +32,7 @@ const AppMenu = () => {
   const iconClassName = classNames(theme.layout && theme.layout.header.variant === 'dense' && classes.denseButton)
 
   return (
-    <div>
+    <div {...props}>
       <IconButton onClick={(e) => setMenuAnchor(e.target)} className={iconClassName}>
         <MenuIcon />
       </IconButton>
