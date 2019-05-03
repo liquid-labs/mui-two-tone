@@ -1,12 +1,10 @@
 import React from 'react'
 
-import { BasicContentFrame } from '@liquid-labs/catalyst-core-ui'
 import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import { CardContainer } from '@liquid-labs/mui-extensions'
 import CardContent from '@material-ui/core/CardContent'
 import Grid from '@material-ui/core/Grid'
-import { SplashLogo } from '../widgets/SplashLogo'
 import Typography from '@material-ui/core/Typography'
 
 import { makeStyles, useTheme } from '@material-ui/styles'
@@ -47,29 +45,26 @@ const Dashboard = () => {
   const theme = useTheme()
   const cardClasses = useCardStyles()
   return (
-    <BasicContentFrame>
-      <SplashLogo />
-      <CardContainer>
-        {
-          theme.sections.map((sectionDef, i) => {
-            const { label, path, onClick, Icon } = sectionDef
-            return <Card key={path} className={cardClasses.root}>
-              <CardActionArea className={cardClasses.action} onClick={onClick}>
-                <CardContent className={cardClasses.content}>
-                  <Grid component={Typography} variant="h5" container>
-                    {Icon && <Icon />}{label}
-                  </Grid>
-                  <Typography component="div">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    {i === 2 && "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          })
-        }
-      </CardContainer>
-    </BasicContentFrame>
+    <CardContainer>
+      {
+        theme.sections.map((sectionDef, i) => {
+          const { label, path, onClick, Icon } = sectionDef
+          return <Card key={path} className={cardClasses.root}>
+            <CardActionArea className={cardClasses.action} onClick={onClick} style={{height: '100%'}}>
+              <CardContent className={cardClasses.content} style={{height: '100%'}}>
+                <Grid component={Typography} variant="h5" container>
+                  {Icon && <Icon />}{label}
+                </Grid>
+                <Typography component="div">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  {i === 2 && "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                </Typography>
+              </CardContent>
+            </CardActionArea>
+          </Card>
+        })
+      }
+    </CardContainer>
   )
 }
 
