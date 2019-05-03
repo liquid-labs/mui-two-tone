@@ -13,7 +13,7 @@ const SplashLogo = ({minHeight=100}) => {
   var logo
   if (theme.branding && theme.branding.splash) {
     const { node, url, altText } = theme.branding.splash
-    logo = node || <div style={{ minHeight, height: '100%', background: `transparent url(${url}) 50% 50% no-repeat` }}></div>
+    logo = node || <div style={{ minHeight, height : '100%', background : `transparent url(${url}) 50% 50% no-repeat` }} />
   }
 
   return (

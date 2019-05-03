@@ -50,8 +50,8 @@ const Dashboard = () => {
         theme.sections.map((sectionDef, i) => {
           const { label, path, onClick, Icon } = sectionDef
           return <Card key={path} className={cardClasses.root}>
-            <CardActionArea className={cardClasses.action} onClick={onClick} style={{height: '100%'}}>
-              <CardContent className={cardClasses.content} style={{height: '100%'}}>
+            <CardActionArea className={cardClasses.action} onClick={onClick} style={{height : '100%'}}>
+              <CardContent className={cardClasses.content} style={{height : '100%'}}>
                 <Grid component={Typography} variant="h5" container>
                   {Icon && <Icon />}{label}
                 </Grid>
