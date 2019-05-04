@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Grid from '@material-ui/core/Grid'
 import Grow from '@material-ui/core/Grow'
 
 import { useTheme } from '@material-ui/styles'
@@ -12,7 +11,7 @@ const SplashLogo = ({minHeight=100}) => {
     || theme.transitions.duration.complex // fallback, material-ui standard
   var logo
   if (theme.branding && theme.branding.splash) {
-    const { node, url, altText } = theme.branding.splash
+    const { node, url } = theme.branding.splash
     logo = node || <div style={{ minHeight, height : '100%', background : `transparent url(${url}) 50% 50% no-repeat` }} />
   }
 

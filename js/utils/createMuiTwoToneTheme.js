@@ -28,12 +28,12 @@ const splashSpec = {
       children : <SplashLogo />,
       props    : {
         style              : { flexGrow : 4 },
-        ToolbarProps       : { style : { height : '100%' }},
+        ToolbarProps       : { style : { height : '100%' } },
         NavigationBarProps : {
           style           : { height : '100%' },
-          LeftGridProps   : { style : { flexBasis : '0'}},
-          CenterGridProps : { style : { flexBasis : '100%', maxWidth : 'unset', padding : '15px 0', height : '100%' }},
-          RightGridProps  : { style : { flexBasis : '0'}}
+          LeftGridProps   : { style : { flexBasis : '0' } },
+          CenterGridProps : { style : { flexBasis : '100%', maxWidth : 'unset', padding : '15px 0', height : '100%' } },
+          RightGridProps  : { style : { flexBasis : '0' } }
         }
       }
     },
