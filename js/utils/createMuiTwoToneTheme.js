@@ -7,9 +7,6 @@ import { createCatalystTheme } from '@liquid-labs/catalyst-theme'
 import merge from 'lodash.merge'
 
 const splashSpec = {
-  palette : {
-    background : { default : '#fff' },
-  },
   overrides : {
     AppMenuBar : {
       root        : { boxShadow : 'none', border : 'none' },
