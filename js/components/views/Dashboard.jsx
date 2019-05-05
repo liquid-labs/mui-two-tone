@@ -4,7 +4,6 @@ import Card from '@material-ui/core/Card'
 import CardActionArea from '@material-ui/core/CardActionArea'
 import { CardContainer } from '@liquid-labs/mui-extensions'
 import CardContent from '@material-ui/core/CardContent'
-import Grid from '@material-ui/core/Grid'
 import Typography from '@material-ui/core/Typography'
 
 import { makeStyles, useTheme } from '@material-ui/styles'
@@ -32,11 +31,35 @@ const cardStyles = (theme) => ({
   },
   action : {
     // outlineColor : `${theme.palette.secondary.main}`,
-    // height : '100%',
+    height : '100%',
   },
   content : {
-    // height : '100%',
+    height : '100%',
+    color : theme.palette.primary.main,
   },
+  title : {
+    color : 'inherit !important',
+    borderBottom: `1px solid ${theme.palette.secondary.main}`
+  },
+  summary : {
+    color : 'inherit !important',
+  },
+  icon : {
+    float : 'right',
+    backgroundColor : theme.palette.primary.main,
+    color : theme.palette.primary.contrastText,
+    fontSize: '48px !important',
+    borderRadius : '50%',
+    padding: 8,
+    marginTop: 8,
+    clear: 'both',
+  },
+  spacer : {
+    content: '',
+    display : 'block',
+    float: 'right',
+    height: 'calc(100% - 88px)'
+  }
 })
 
 const useCardStyles = makeStyles(cardStyles)
@@ -50,14 +73,16 @@ const Dashboard = () => {
         theme.sections.map((sectionDef, i) => {
           const { Icon, label, summary, path, onClick } = sectionDef
           return <Card key={path} className={cardClasses.root}>
-            <CardActionArea className={cardClasses.action} onClick={onClick} style={{height : '100%'}}>
-              <CardContent className={cardClasses.content} style={{height : '100%'}}>
-                <Grid component={Typography} variant="h5" container>
-                  {Icon && <Icon />}{label}
-                </Grid>
-                <Typography component="div">
+            <CardActionArea className={cardClasses.action} onClick={onClick}>
+              <CardContent className={cardClasses.content}>
+                <Typography className={cardClasses.title} variant="h5">
+                  {label}
+                </Typography>
+                {Icon && <><div className={cardClasses.spacer}></div><Icon className={cardClasses.icon} /></>}
+                <Typography className={cardClasses.summary} component="div">
                   {summary}
                 </Typography>
+                <div style={{ clear: 'both' }}></div>
               </CardContent>
             </CardActionArea>
           </Card>
