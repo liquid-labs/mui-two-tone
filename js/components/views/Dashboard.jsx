@@ -78,11 +78,11 @@ const Dashboard = () => {
                 <Typography className={cardClasses.title} variant="h5">
                   {label}
                 </Typography>
-                {Icon && <><div className={cardClasses.spacer}></div><Icon className={cardClasses.icon} /></>}
+                {Icon && <><div className={cardClasses.spacer} /><Icon className={cardClasses.icon} /></>}
                 <Typography className={cardClasses.summary} component="div">
                   {summary}
                 </Typography>
-                <div style={{ clear: 'both' }}></div>
+                <div style={{ clear: 'both' }} />
               </CardContent>
             </CardActionArea>
           </Card>
