@@ -48,7 +48,7 @@ const Dashboard = () => {
     <CardContainer>
       {
         theme.sections.map((sectionDef, i) => {
-          const { label, path, onClick, Icon } = sectionDef
+          const { Icon, label, summary, path, onClick } = sectionDef
           return <Card key={path} className={cardClasses.root}>
             <CardActionArea className={cardClasses.action} onClick={onClick} style={{height : '100%'}}>
               <CardContent className={cardClasses.content} style={{height : '100%'}}>
@@ -56,8 +56,7 @@ const Dashboard = () => {
                   {Icon && <Icon />}{label}
                 </Grid>
                 <Typography component="div">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  {i === 2 && "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+                  {summary}
                 </Typography>
               </CardContent>
             </CardActionArea>
