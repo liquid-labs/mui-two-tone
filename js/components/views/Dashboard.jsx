@@ -8,24 +8,6 @@ import Typography from '@material-ui/core/Typography'
 
 import { makeStyles, useTheme } from '@material-ui/styles'
 
-// import { SetupInstructions } from './SetupInstructions'
-/*
-import Markdown from 'react-markdown'
-import * as Sqrl from 'squirrelly'
-
-const MarkdownPOC = () => {
-  const testMd = `# Hi!
-* this is a list
-
-*bold* words!
-
-template var foo: {{foo}}`
-  const firstPass = Sqrl.Render(testMd, { foo: 'is Foo!' })
-
-  return <Markdown source={firstPass} />
-}
-*/
-
 const cardStyles = (theme) => ({
   root : {
   },
