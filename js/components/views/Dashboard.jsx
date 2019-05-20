@@ -46,7 +46,7 @@ const cardStyles = (theme) => ({
 
 const useCardStyles = makeStyles(cardStyles)
 
-const Dashboard = () => {
+const Dashboard = ({history}) => {
   const theme = useTheme()
   const cardClasses = useCardStyles()
   return (
@@ -54,8 +54,12 @@ const Dashboard = () => {
       {
         theme.sections.map((sectionDef, i) => {
           const { Icon, label, summary, path, onClick } = sectionDef
+
+          // TODO: will cause unecessary re-renders
+          const clickHandler = onClick || (() => history.push(path))
+
           return <Card key={path} className={cardClasses.root}>
-            <CardActionArea className={cardClasses.action} onClick={onClick}>
+            <CardActionArea className={cardClasses.action} onClick={clickHandler}>
               <CardContent className={cardClasses.content}>
                 <Typography className={cardClasses.title} variant="h5">
                   {label}
