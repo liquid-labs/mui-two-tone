@@ -78,7 +78,7 @@ const splashSpec = (shadowColor) => ({
       children : <SplashLogo />,
       props    : {
         style              : { flexGrow : 4 },
-        ToolbarProps       : { style : { height : '100%' } },
+        ToolbarProps       : { style : { flexGrow : 1 } },
         NavigationBarProps : {
           style           : { height : '100%' },
           LeftGridProps   : { style : { flexBasis : '0' } },
