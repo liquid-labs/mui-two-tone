@@ -1,6 +1,6 @@
 {
   "name": "@liquid-labs/mui-two-tone",
-  "version": "1.0.0-prototype.0",
+  "version": "1.0.0-prototype.1",
   "description": "A Catalyst theme implementing a simple, two-tone theme.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
