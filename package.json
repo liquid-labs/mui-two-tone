@@ -36,7 +36,7 @@
   "dependencies": {},
   "devDependencies": {
     "@liquid-labs/catalyst-core-api": "^1.0.0-prototype.11",
-    "@liquid-labs/catalyst-core-ui": "file:.yalc/@liquid-labs/catalyst-core-ui",
+    "@liquid-labs/catalyst-core-ui": "^1.0.0-prototype.8",
     "@liquid-labs/catalyst-firewrap": "^2.0.0-prototype.2",
     "@liquid-labs/catalyst-persons-api": "^1.0.0-prototype.6",
     "@liquid-labs/catalyst-scripts": "^1.0.0-alpha.22",
